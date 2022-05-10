@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		B6681E01282A9EC500ADC325 /* FidgetAnimationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E00282A9EC500ADC325 /* FidgetAnimationAppApp.swift */; };
-		B6681E03282A9EC500ADC325 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E02282A9EC500ADC325 /* ContentView.swift */; };
 		B6681E05282A9EC900ADC325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6681E04282A9EC900ADC325 /* Assets.xcassets */; };
 		B6681E08282A9EC900ADC325 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6681E07282A9EC900ADC325 /* Preview Assets.xcassets */; };
+		B6681E0F282A9EE700ADC325 /* AnimationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E0E282A9EE700ADC325 /* AnimationDetailView.swift */; };
+		B6681E13282A9F2600ADC325 /* AnimationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E12282A9F2600ADC325 /* AnimationList.swift */; };
+		B6681E15282AA01800ADC325 /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E14282AA01800ADC325 /* CirclesView.swift */; };
+		B6681E17282AA18200ADC325 /* SquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E16282AA18200ADC325 /* SquaresView.swift */; };
+		B6681E19282AA20D00ADC325 /* FidgetsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E18282AA20D00ADC325 /* FidgetsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B6681DFD282A9EC500ADC325 /* FidgetAnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FidgetAnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6681E00282A9EC500ADC325 /* FidgetAnimationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidgetAnimationAppApp.swift; sourceTree = "<group>"; };
-		B6681E02282A9EC500ADC325 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B6681E04282A9EC900ADC325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6681E07282A9EC900ADC325 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B6681E0E282A9EE700ADC325 /* AnimationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDetailView.swift; sourceTree = "<group>"; };
+		B6681E12282A9F2600ADC325 /* AnimationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationList.swift; sourceTree = "<group>"; };
+		B6681E14282AA01800ADC325 /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
+		B6681E16282AA18200ADC325 /* SquaresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresView.swift; sourceTree = "<group>"; };
+		B6681E18282AA20D00ADC325 /* FidgetsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidgetsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				B6681E00282A9EC500ADC325 /* FidgetAnimationAppApp.swift */,
-				B6681E02282A9EC500ADC325 /* ContentView.swift */,
+				B6681E10282A9EFB00ADC325 /* Views */,
+				B6681E11282A9F0700ADC325 /* Model */,
 				B6681E04282A9EC900ADC325 /* Assets.xcassets */,
 				B6681E06282A9EC900ADC325 /* Preview Content */,
 			);
@@ -65,6 +74,25 @@
 				B6681E07282A9EC900ADC325 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B6681E10282A9EFB00ADC325 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6681E18282AA20D00ADC325 /* FidgetsListView.swift */,
+				B6681E0E282A9EE700ADC325 /* AnimationDetailView.swift */,
+				B6681E14282AA01800ADC325 /* CirclesView.swift */,
+				B6681E16282AA18200ADC325 /* SquaresView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6681E11282A9F0700ADC325 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6681E12282A9F2600ADC325 /* AnimationList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6681E03282A9EC500ADC325 /* ContentView.swift in Sources */,
+				B6681E0F282A9EE700ADC325 /* AnimationDetailView.swift in Sources */,
+				B6681E17282AA18200ADC325 /* SquaresView.swift in Sources */,
+				B6681E13282A9F2600ADC325 /* AnimationList.swift in Sources */,
+				B6681E19282AA20D00ADC325 /* FidgetsListView.swift in Sources */,
+				B6681E15282AA01800ADC325 /* CirclesView.swift in Sources */,
 				B6681E01282A9EC500ADC325 /* FidgetAnimationAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

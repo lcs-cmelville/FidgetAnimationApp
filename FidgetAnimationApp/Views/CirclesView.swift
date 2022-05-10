@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CirlcesView.swift
 //  FidgetAnimationApp
 //
 //  Created by Claire Coding Account on 2022-05-10.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CirclesView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("This Is the Cirlces View")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CirclesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CirclesView()
     }
 }

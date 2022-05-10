@@ -11,7 +11,7 @@ import SwiftUI
 struct FidgetAnimationAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FidgetsListView()
         }
     }
 }
