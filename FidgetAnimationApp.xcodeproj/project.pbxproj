@@ -15,6 +15,9 @@
 		B6681E15282AA01800ADC325 /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E14282AA01800ADC325 /* CirclesView.swift */; };
 		B6681E17282AA18200ADC325 /* SquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E16282AA18200ADC325 /* SquaresView.swift */; };
 		B6681E19282AA20D00ADC325 /* FidgetsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6681E18282AA20D00ADC325 /* FidgetsListView.swift */; };
+		B6B933AF282C0F5F006F82A2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B933AE282C0F5F006F82A2 /* LoadingView.swift */; };
+		B6B933B1282C1170006F82A2 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B933B0282C1170006F82A2 /* FavouritesView.swift */; };
+		B6B933B3282C18A3006F82A2 /* ColourPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B933B2282C18A3006F82A2 /* ColourPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		B6681E14282AA01800ADC325 /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
 		B6681E16282AA18200ADC325 /* SquaresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresView.swift; sourceTree = "<group>"; };
 		B6681E18282AA20D00ADC325 /* FidgetsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidgetsListView.swift; sourceTree = "<group>"; };
+		B6B933AE282C0F5F006F82A2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B6B933B0282C1170006F82A2 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		B6B933B2282C18A3006F82A2 /* ColourPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +87,11 @@
 			children = (
 				B6681E18282AA20D00ADC325 /* FidgetsListView.swift */,
 				B6681E0E282A9EE700ADC325 /* AnimationDetailView.swift */,
+				B6B933B0282C1170006F82A2 /* FavouritesView.swift */,
 				B6681E14282AA01800ADC325 /* CirclesView.swift */,
 				B6681E16282AA18200ADC325 /* SquaresView.swift */,
+				B6B933AE282C0F5F006F82A2 /* LoadingView.swift */,
+				B6B933B2282C18A3006F82A2 /* ColourPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,9 +176,12 @@
 			files = (
 				B6681E0F282A9EE700ADC325 /* AnimationDetailView.swift in Sources */,
 				B6681E17282AA18200ADC325 /* SquaresView.swift in Sources */,
+				B6B933B1282C1170006F82A2 /* FavouritesView.swift in Sources */,
 				B6681E13282A9F2600ADC325 /* AnimationList.swift in Sources */,
 				B6681E19282AA20D00ADC325 /* FidgetsListView.swift in Sources */,
 				B6681E15282AA01800ADC325 /* CirclesView.swift in Sources */,
+				B6B933AF282C0F5F006F82A2 /* LoadingView.swift in Sources */,
+				B6B933B3282C18A3006F82A2 /* ColourPickerView.swift in Sources */,
 				B6681E01282A9EC500ADC325 /* FidgetAnimationAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

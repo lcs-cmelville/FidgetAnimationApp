@@ -26,4 +26,10 @@ let animationsList = [
         name: "Squares",
         id: 2)
     
+    ,
+    
+    FidgetAnimation(
+        name: "Loading",
+        id: 3)
+    
 ]

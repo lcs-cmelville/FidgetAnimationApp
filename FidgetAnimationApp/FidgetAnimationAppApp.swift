@@ -11,7 +11,22 @@ import SwiftUI
 struct FidgetAnimationAppApp: App {
     var body: some Scene {
         WindowGroup {
-            FidgetsListView()
+            NavigationView{
+                
+                TabView{
+                    FidgetsListView()
+                        .tabItem {
+                            Image(systemName: "lasso.and.sparkles")
+                            Text("Fidgets")
+                    }
+                    
+                    FavouritesView()
+                        .tabItem {
+                            Image(systemName: "heart.circle")
+                            Text("Favourites")
+                    }
+                }
+            }
         }
     }
 }

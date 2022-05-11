@@ -9,11 +9,17 @@ import SwiftUI
 
 struct FidgetsListView: View {
     var body: some View {
+        
         List(animationsList) { currentAnimation in
+            
             NavigationLink(destination: {
+                
                 AnimationDetailView(animationToShow: currentAnimation)
+                
             }, label: {
+                
                 Text(currentAnimation.name)
+                
             })
         }
      }

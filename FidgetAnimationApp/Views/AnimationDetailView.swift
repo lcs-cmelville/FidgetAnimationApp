@@ -13,9 +13,11 @@ struct AnimationDetailView: View {
     
     var body: some View {
         if animationToShow.name == "Circles" {
-            CirclesView()
+            CirclesView(firstCircleColour: .pink, secondCircleColour: .red, thirdCircleColour: .purple, fourthCircleColour: .blue, fifthCircleColour: .green, sixthCircleColour: .yellow)
         } else if animationToShow.name == "Squares" {
             SquaresView()
+        } else if animationToShow.name == "Loading" {
+            LoadingView()
         }
     }
 }
