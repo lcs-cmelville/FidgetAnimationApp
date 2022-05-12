@@ -25,23 +25,24 @@ struct FavouritesView: View {
                     .padding()
                 
                 Spacer()
-
+                
             } else {
                 List(favourites) { currentAnimation in
-                NavigationLink(destination: {
-
-                    AnimationDetailView(animationToShow: currentAnimation, favourites: .constant([testItem]))
-
-                }, label: {
-
-                    Text(currentAnimation.name)
-
-                })
-            
+                    NavigationLink(destination: {
+                        
+                        AnimationDetailView(animationToShow: currentAnimation,
+                                            favourites: $favourites)
+                        
+                    }, label: {
+                        
+                        Text(currentAnimation.name)
+                        
+                    })
+                    
                 }
             }
-            
         }
+        .navigationTitle("Favourites")
     }
 }
 

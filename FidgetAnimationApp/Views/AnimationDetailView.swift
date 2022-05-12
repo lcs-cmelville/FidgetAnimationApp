@@ -13,12 +13,11 @@ struct AnimationDetailView: View {
     
     @Binding var favourites: [FidgetAnimation]
     
-    
     var body: some View {
         if animationToShow.name == "Circles" {
-            CirclesView(favourites: $favourites, isFavourite: false)
+            CirclesView(favourites: $favourites, isFavourite: true)
         } else if animationToShow.name == "Squares" {
-            SquaresView()
+            SquaresView(favourites: $favourites)
         } else if animationToShow.name == "Loading" {
             LoadingView()
         }

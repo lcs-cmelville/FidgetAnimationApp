@@ -66,9 +66,15 @@ struct CirclesView: View {
         VStack {
             
         Image(systemName: "heart.circle")
+                .foregroundColor(.black)
+                .opacity(50)
                 .scaleEffect(2)
                 .padding()
                 .onTapGesture {
+            
+                    favourites.append(FidgetAnimation(name: "Circles", id: 1))
+                    
+                    print(dump(favourites))
                     
                 }
             

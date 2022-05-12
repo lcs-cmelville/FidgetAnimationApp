@@ -14,21 +14,21 @@ struct FidgetsListView: View {
     var body: some View {
         
         NavigationView{
-        
-        List(animationsList) { currentAnimation in
             
-            NavigationLink(destination: {
+            List(animationsList) { currentAnimation in
                 
-                AnimationDetailView(animationToShow: currentAnimation, favourites: $favourites)
-                
-            }, label: {
-                
-                Text(currentAnimation.name)
-                
-            })
+                NavigationLink(destination: {
+                    
+                    AnimationDetailView(animationToShow: currentAnimation, favourites: $favourites)
+                    
+                }, label: {
+                    
+                    Text(currentAnimation.name)
+                    
+                })
+            }
         }
-        }
-     }
+    }
 }
 
 struct FidgetsListView_Previews: PreviewProvider {

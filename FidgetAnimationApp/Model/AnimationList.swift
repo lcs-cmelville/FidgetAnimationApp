@@ -12,7 +12,7 @@ struct FidgetAnimation: Identifiable {
     let id: Int
 }
 
-let testItem = FidgetAnimation(name: "Cirlces", id: 1)
+let testItem = FidgetAnimation(name: "Cirlces", id: 0)
 
 let animationsList = [
 
