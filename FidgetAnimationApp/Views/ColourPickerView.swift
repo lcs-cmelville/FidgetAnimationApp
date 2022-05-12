@@ -8,8 +8,41 @@
 import SwiftUI
 
 struct ColourPickerView: View {
+    
+    //MARK: Stored Properties
+    
+    @State var selectedColour = Color.red
+    @State var selectedColourTwo = Color.red
+    @State var selectedColourThree = Color.red
+    @State var selectedColourFour = Color.red
+    @State var selectedColourFive = Color.red
+    @State var selectedColourSix = Color.red
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            ColorPicker("Set the First Circle or Square Colour",
+                        selection: $selectedColour)
+                
+            ColorPicker("Set the Second Circle or Square Colour",
+                        selection: $selectedColourTwo)
+                
+            ColorPicker("Set the Third Circle or Square Colour",
+                        selection: $selectedColourThree)
+                
+            ColorPicker("Set the Fourth Circle or Square Colour",
+                        selection: $selectedColourFour)
+                
+            ColorPicker("Set the Fifth Circle Colour",
+                        selection: $selectedColourFive)
+            
+            ColorPicker("Set the Sixth Circle Colour",
+                        selection: $selectedColourSix)
+            
+        }
+        .padding()
+        
+        Spacer()
     }
 }
 

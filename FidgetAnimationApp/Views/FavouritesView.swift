@@ -8,13 +8,45 @@
 import SwiftUI
 
 struct FavouritesView: View {
+    
+    @Binding var favourites: [FidgetAnimation]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            
+            if favourites.isEmpty {
+                
+                Spacer()
+                
+                Text("No Favourites yet")
+                    .font(.title)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                Spacer()
+
+            } else {
+                List(favourites) { currentAnimation in
+                NavigationLink(destination: {
+
+                    AnimationDetailView(animationToShow: currentAnimation, favourites: .constant([testItem]))
+
+                }, label: {
+
+                    Text(currentAnimation.name)
+
+                })
+            
+                }
+            }
+            
+        }
     }
 }
 
 struct FavouritesView_Previews: PreviewProvider {
     static var previews: some View {
-        FavouritesView()
+        FavouritesView(favourites: .constant([testItem]))
     }
 }

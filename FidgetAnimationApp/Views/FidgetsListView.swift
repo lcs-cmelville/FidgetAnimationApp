@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct FidgetsListView: View {
+    
+    @Binding var favourites: [FidgetAnimation]
+    
     var body: some View {
+        
+        NavigationView{
         
         List(animationsList) { currentAnimation in
             
             NavigationLink(destination: {
                 
-                AnimationDetailView(animationToShow: currentAnimation)
+                AnimationDetailView(animationToShow: currentAnimation, favourites: $favourites)
                 
             }, label: {
                 
@@ -22,11 +27,12 @@ struct FidgetsListView: View {
                 
             })
         }
+        }
      }
 }
 
 struct FidgetsListView_Previews: PreviewProvider {
     static var previews: some View {
-        FidgetsListView()
+        FidgetsListView(favourites: .constant([testItem]))
     }
 }

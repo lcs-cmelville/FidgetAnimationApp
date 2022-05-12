@@ -11,9 +11,12 @@ struct AnimationDetailView: View {
     
     let animationToShow: FidgetAnimation
     
+    @Binding var favourites: [FidgetAnimation]
+    
+    
     var body: some View {
         if animationToShow.name == "Circles" {
-            CirclesView(firstCircleColour: .pink, secondCircleColour: .red, thirdCircleColour: .purple, fourthCircleColour: .blue, fifthCircleColour: .green, sixthCircleColour: .yellow)
+            CirclesView(favourites: $favourites, isFavourite: false)
         } else if animationToShow.name == "Squares" {
             SquaresView()
         } else if animationToShow.name == "Loading" {
@@ -24,6 +27,6 @@ struct AnimationDetailView: View {
 
 struct AnimationDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimationDetailView(animationToShow: testItem)
+        AnimationDetailView(animationToShow: testItem, favourites: .constant([testItem]))
     }
 }

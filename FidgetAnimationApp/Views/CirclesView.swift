@@ -11,48 +11,52 @@ struct CirclesView: View {
     
     //MARK: Stored Properties
     
-    let firstCircleColour: Color
+    @Binding var favourites: [FidgetAnimation]
+    
+    @State var isFavourite: Bool
     
     @State var circleOpacity = 1.0
     
     @State var xOffset = 0.0
     @State var yOffset = 0.0
     
-    let secondCircleColour: Color
     
     @State var circleOpacityTwo = 1.0
     
     @State var xOffsetTwo = 0.0
     @State var yOffsetTwo = 0.0
     
-    let thirdCircleColour: Color
     
     @State var circleOpacityThree = 1.0
     
     @State var xOffsetThree = 0.0
     @State var yOffsetThree = 0.0
     
-    let fourthCircleColour: Color
     
     @State var circleOpacityFour = 1.0
     
     @State var xOffsetFour = 0.0
     @State var yOffsetFour = 0.0
     
-    let fifthCircleColour: Color
     
     @State var circleOpacityFive = 1.0
     
     @State var xOffsetFive = 0.0
     @State var yOffsetFive = 0.0
     
-    let sixthCircleColour: Color
     
     @State var circleOpacitySix = 1.0
     
     @State var xOffsetSix = 0.0
     @State var yOffsetSix = 0.0
     
+    
+    @State var selectedColour = Color.red
+    @State var selectedColourTwo = Color.red
+    @State var selectedColourThree = Color.red
+    @State var selectedColourFour = Color.red
+    @State var selectedColourFive = Color.red
+    @State var selectedColourSix = Color.red
 
     
     var body: some View {
@@ -61,6 +65,12 @@ struct CirclesView: View {
         
         VStack {
             
+        Image(systemName: "heart.circle")
+                .scaleEffect(2)
+                .padding()
+                .onTapGesture {
+                    
+                }
             
             Text("Tap the Circle!")
                 
@@ -103,7 +113,7 @@ struct CirclesView: View {
                 
                 Circle()
                     .frame(width: 75, height: 75)
-                    .foregroundColor(sixthCircleColour)
+                    .foregroundColor(selectedColourSix)
                     .opacity(circleOpacitySix)
                     .offset(x: xOffsetSix, y: yOffsetSix)
                     .onTapGesture {
@@ -121,7 +131,7 @@ struct CirclesView: View {
                 
                 Circle()
                     .frame(width: 75, height: 75)
-                    .foregroundColor(fifthCircleColour)
+                    .foregroundColor(selectedColourFive)
                     .opacity(circleOpacityFive)
                     .offset(x: xOffsetFive, y: yOffsetFive)
                     .onTapGesture {
@@ -139,7 +149,7 @@ struct CirclesView: View {
                 
                 Circle()
                     .frame(width: 75, height: 75)
-                    .foregroundColor(fourthCircleColour)
+                    .foregroundColor(selectedColourFour)
                     .opacity(circleOpacityFour)
                     .offset(x: xOffsetFour, y: yOffsetFour)
                     .onTapGesture {
@@ -157,7 +167,7 @@ struct CirclesView: View {
                 
                 Circle()
                     .frame(width: 75, height: 75)
-                    .foregroundColor(thirdCircleColour)
+                    .foregroundColor(selectedColourThree)
                     .opacity(circleOpacityThree)
                     .offset(x: xOffsetThree, y: yOffsetThree)
                     .onTapGesture {
@@ -175,7 +185,7 @@ struct CirclesView: View {
                 
                 Circle()
                     .frame(width: 75, height: 75)
-                    .foregroundColor(secondCircleColour)
+                    .foregroundColor(selectedColourTwo)
                     .opacity(circleOpacityTwo)
                     .offset(x: xOffsetTwo, y: yOffsetTwo)
                     .onTapGesture {
@@ -193,7 +203,7 @@ struct CirclesView: View {
                 
                 Circle()
                     .frame(width: 75, height: 75)
-                    .foregroundColor(firstCircleColour)
+                    .foregroundColor(selectedColour)
                     .opacity(circleOpacity)
                     .offset(x: xOffset, y: yOffset)
                     .onTapGesture {
@@ -214,14 +224,37 @@ struct CirclesView: View {
             
             Spacer()
             
-            List{
-                NavigationLink(destination: ColourPickerView(),
-                label: {
-                    Text("Pick")
+//            List{
+//                NavigationLink(destination: ColourPickerView(),
+//                label: {
+//                    Text("Pick")
+//
+//                })
+//            }
+//            .frame(height: 75, alignment: .bottom)
+            
+            VStack {
+                
+                ColorPicker("Set the First Circle or Square Colour",
+                            selection: $selectedColour)
                     
-                })
+                ColorPicker("Set the Second Circle or Square Colour",
+                            selection: $selectedColourTwo)
+                    
+                ColorPicker("Set the Third Circle or Square Colour",
+                            selection: $selectedColourThree)
+                    
+                ColorPicker("Set the Fourth Circle or Square Colour",
+                            selection: $selectedColourFour)
+                    
+                ColorPicker("Set the Fifth Circle Colour",
+                            selection: $selectedColourFive)
+                
+                ColorPicker("Set the Sixth Circle Colour",
+                            selection: $selectedColourSix)
+                
             }
-            .frame(height: 75, alignment: .bottom)
+            .padding()
 
             }
         }
@@ -230,6 +263,6 @@ struct CirclesView: View {
 
 struct CirclesView_Previews: PreviewProvider {
     static var previews: some View {
-        CirclesView(firstCircleColour:.pink, secondCircleColour: .red, thirdCircleColour: .purple, fourthCircleColour: .blue, fifthCircleColour: .green, sixthCircleColour: .yellow)
+        CirclesView(favourites: .constant([testItem]), isFavourite: false)
     }
 }
