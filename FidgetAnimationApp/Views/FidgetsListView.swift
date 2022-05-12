@@ -15,6 +15,8 @@ struct FidgetsListView: View {
         
         NavigationView{
             
+            VStack {
+            
             List(animationsList) { currentAnimation in
                 
                 NavigationLink(destination: {
@@ -27,6 +29,8 @@ struct FidgetsListView: View {
                     
                 })
             }
+        }
+        .navigationTitle("Fidgets")
         }
     }
 }

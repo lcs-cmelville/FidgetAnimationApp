@@ -17,9 +17,9 @@ struct AnimationDetailView: View {
         if animationToShow.name == "Circles" {
             CirclesView(favourites: $favourites, isFavourite: true)
         } else if animationToShow.name == "Squares" {
-            SquaresView(favourites: $favourites)
+            SquaresView(firstSquareColour: .red, secondSquareColour: .purple, thirdSquareColour: .blue, fourthSquareColour: .green, favourites: $favourites)
         } else if animationToShow.name == "Loading" {
-            LoadingView()
+            LoadingView(favourites: $favourites, firstDotColour: .red, secondDotColour: .purple, thirdDotColour: .blue)
         }
     }
 }
